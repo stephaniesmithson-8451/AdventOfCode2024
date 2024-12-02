@@ -37,6 +37,12 @@ std::string get_order(int a, int b) {
     }
 }
 
+int get_report_length(std::vector<int> report) {
+    int len = 0;
+    for (const auto& num : report) len++;
+    return len;
+}
+
 bool check_report_is_safe(std::vector<int> report) {
     std::string order;
     int i, first_num, second_num, previous_num = 0;
@@ -71,7 +77,7 @@ bool check_report_is_safe(std::vector<int> report) {
 }
 
 int main() {
-    // Creating a list of int lists... this should be fun
+    // Creating a list of int vectors... this should be fun
     std::list<std::vector<int>> reports;
     int n_safe_reports = 0;
 
@@ -83,6 +89,28 @@ int main() {
         bool safe = check_report_is_safe(report);
         if (safe == false) {
             std::cout << "FAILED safety check\n";
+            std::vector<int> modified_report;
+            bool safe_version_found = false;
+            int report_length = get_report_length(report);
+            int x = 0;
+
+            while(x < report_length && safe_version_found == false){
+                modified_report.clear();
+                int index = 0;
+
+                for (const auto& num : report) {
+                    if (index != x) modified_report.push_back(num);
+                    index++;
+                }
+
+                bool dampener_safe = check_report_is_safe(modified_report);
+                if (dampener_safe == true) {
+                    safe_version_found = true;
+                    n_safe_reports++;
+                }
+                x++;      
+            }
+            
         } else {
             std::cout << "PASSED safety check\n";
             n_safe_reports++;
