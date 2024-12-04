@@ -41,9 +41,35 @@ public class Memory {
         return total;
     }
 
+    public static String filterGibberish(String gibberish) {
+        String filteredGibberish = "";
+        String[] chunks = gibberish.split("do[(][)]");
+
+        for (String chunk : chunks) {
+            int index = chunk.indexOf("don't()");
+            String validChunk = "";
+
+            if (index != -1) {
+                System.out.println("Found a don\'t in the string");
+                validChunk = chunk.substring(0, index);
+            } else {
+                validChunk = chunk;
+            }
+
+            System.out.println("Chunk: " + chunk);
+            System.out.println("Valid chunk: " + validChunk);
+            filteredGibberish += validChunk;
+        }
+
+        return filteredGibberish;
+    }
+
     public static void main(String[] args) {
         String gibberish = readGibberishFile("data.txt");
-        int total = parseGibberish(gibberish);
+        String filteredGibberish = filterGibberish(gibberish);
+        System.out.println("FilteredGibberish: " + filteredGibberish + "\n");
+
+        int total = parseGibberish(filteredGibberish);
         System.out.println("\nThe total is: " + total);
     }
 
