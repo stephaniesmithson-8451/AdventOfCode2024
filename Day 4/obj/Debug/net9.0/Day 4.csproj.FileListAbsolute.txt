@@ -1,0 +1,15 @@
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/bin/Debug/net9.0/Day 4
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/bin/Debug/net9.0/Day 4.deps.json
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/bin/Debug/net9.0/Day 4.runtimeconfig.json
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/bin/Debug/net9.0/Day 4.dll
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/bin/Debug/net9.0/Day 4.pdb
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.AssemblyInfoInputs.cache
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.AssemblyInfo.cs
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.csproj.CoreCompileInputs.cache
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.sourcelink.json
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.dll
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/refint/Day 4.dll
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.pdb
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/Day 4.genruntimeconfig.cache
+/Users/stephaniesmithson/Documents/AdventOfCode2024/Day 4/obj/Debug/net9.0/ref/Day 4.dll
