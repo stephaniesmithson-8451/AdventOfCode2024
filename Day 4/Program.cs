@@ -29,6 +29,62 @@ class XmasCounter
         return lines;
     }
 
+    public static int getMASCount(List<string> lines)
+    {
+        int count = 0;
+        int a = 0;
+        foreach (string line in lines)
+        {
+            int i = 0;
+            foreach (char c in line)
+            {
+                if (c.Equals('A'))
+                {
+                    if (a > 0 && a < lines.Count() - 1 && i > 0 && i < (line.Length - 1)
+                    && lines[a - 1][i - 1].Equals('M')
+                    && lines[a + 1][i + 1].Equals('S')
+                    && lines[a + 1][i - 1].Equals('M')
+                    && lines[a - 1][i + 1].Equals('S'))
+                    {
+                        count++;
+                        Console.WriteLine("Found on line " + (a + 1));
+                    }
+                    if (a > 0 && a < lines.Count() - 1 && i > 0 && i < (line.Length - 1)
+                    && lines[a - 1][i - 1].Equals('M')
+                    && lines[a + 1][i + 1].Equals('S')
+                    && lines[a - 1][i + 1].Equals('M')
+                    && lines[a + 1][i - 1].Equals('S'))
+                    {
+                        count++;
+                        Console.WriteLine("Found on line " + (a + 1));
+                    }
+                    if (a > 0 && a < lines.Count() - 1 && i > 0 && i < (line.Length - 1)
+                    && lines[a - 1][i - 1].Equals('S')
+                    && lines[a + 1][i + 1].Equals('M')
+                    && lines[a - 1][i + 1].Equals('M')
+                    && lines[a + 1][i - 1].Equals('S'))
+                    {
+                        count++;
+                        Console.WriteLine("Found on line " + (a + 1));
+                    }
+                    if (a > 0 && a < lines.Count() - 1 && i > 0 && i < (line.Length - 1)
+                    && lines[a - 1][i - 1].Equals('S')
+                    && lines[a + 1][i + 1].Equals('M')
+                    && lines[a - 1][i + 1].Equals('S')
+                    && lines[a + 1][i - 1].Equals('M'))
+                    {
+                        count++;
+                        Console.WriteLine("Found on line " + (a + 1));
+                    }
+                }
+                i++;
+            }
+            a++;
+        }
+
+        return count;
+    }
+
     public static int getXMASCount(List<string> lines)
     {
         int count = 0;
@@ -94,8 +150,7 @@ class XmasCounter
     {
         Console.WriteLine("Hello World");
         List<string> lines = readFile("data.txt");
-        //Console.WriteLine("\n" + lines[0]);
-        int count = getXMASCount(lines);
-        Console.WriteLine("Count of XMAS: " + count);
+        int count = getMASCount(lines);
+        Console.WriteLine("Count of X-MAS: " + count);
     }
 }
